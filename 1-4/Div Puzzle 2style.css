@@ -1,0 +1,121 @@
+/* 共通 */
+#wrapper{
+    width: 400px;
+}
+
+.header{
+    background-color: #141f40;
+    width: 400px;
+    height: 100px;
+}
+/* 緑ブロック */
+.contents-left{
+    background-color: #80bfa8;
+    width: 150px;
+    height: 250px;
+    float: left;
+}
+/* 赤黄青肌 右の４色 浮いてる */
+.contents-right{
+    float: left;
+}
+/* 黄色と青色 */
+.contents-right-top-left{
+    float: left;
+}
+/* 黄色 */
+.contents-right-top-left-top{
+    background-color: #dbd400;
+    width: 150px;
+    height: 50px;
+    /* float: left; */
+}
+/* 肌色 浮いてる */
+.contents-right-top-right{
+    background-color: #ff9e6b;
+    width: 100px;
+    height: 150px;
+    float: right;
+}
+/* 青ブロック */
+.contents-right-top-left-bottom{
+    background-color: #0093b7;
+    width: 150px;
+    height: 100px;
+    /* float: left; */
+}
+
+.contents-right-bottom{
+    background-color: #8c2727;
+    width: 250px;
+    height: 100px;
+}
+
+.footer{
+    background-color: #d98d30;
+    width: 400px;
+    height: 100px;
+}
+
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* タブレット用 */
+@media screen and (max-width: 767px){
+    .header{
+        width: 300px;
+    }
+    .contents-left{
+        width: 100px;
+    }
+    .contents-right-top-left{
+        width: 125px;
+    }
+    .contents-right-top-right{
+        width: 75px;
+    }
+    .contents-right-bottom{
+        width: 200px;
+    }
+    .footer{
+        width: 300px;
+    }    
+}
+
+/* スマホ用 */
+@media screen and (max-width: 479px){
+    /* ヘッダー */
+    .header{
+        width: 150px;
+    }
+    /* 右の緑ブロック */
+    .contents-left{
+        width: 150px;
+        float: none;
+    }
+    /* 黄色と青のブロック */
+    .contents-right-top-left{
+        width: 150px;
+    }
+    /* 肌色ブロック */
+    .contents-right-top-right{
+        width: 150px;
+        float: none;
+    }
+    /* 赤色ブロック */
+    .contents-right-bottom{
+        width: 150px;
+    }
+    /* フッター */
+    .footer{
+        width: 150px;
+    }
+}
