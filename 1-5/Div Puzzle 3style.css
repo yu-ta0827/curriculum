@@ -1,0 +1,205 @@
+/* 共通 */
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#wrapper{
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+/* ヘッダー */
+.header{
+    background-color: #141f40;
+    width: 400px;
+    height: 100px;
+}
+/* ヘッダー内部 */
+.header-contents-left{
+    background-color: white;
+    width: 160px;
+    height: 60px;
+    float: right;
+    margin: 20px 20px;
+}
+
+.header-contents-left-left{
+    background-color: #a9004b;
+    width: 40px;
+    height: 40px;
+    margin: 10px 0 10px 10px;
+    float: left;
+}
+
+.header-contents-left-mid{
+    background-color: #a9004b;
+    width: 40px;
+    height: 40px;
+    margin: 10px;
+    float: left;
+}
+.header-contents-left-right{
+    background-color: #a9004b;
+    width: 40px;
+    height: 40px;
+    margin:  10px 10px 10px 0px;
+    float: left;
+}
+/* ヘッダー内部終わり */
+
+/* レフト */
+.left{
+    background-color: #80bfa8;
+    width: 150px;
+    height: 250px;
+    float: left;
+}
+/* ライト */
+.right{
+    /*  position: relativeはそのブロックを基準に動きを出す
+     position: relativeがない場合web全体に足してを基準になるx */
+    position: relative;
+    background-color: #8c2727;
+    width: 250px;
+    height: 250px;
+    float: left;
+}
+/* ライト内部 */
+.right-content{
+    position: absolute;
+    top: 40px;
+    left: 40px;
+}
+.right-contents-top-top{
+    background-color: #ff863f;
+    width: 140px;
+    height: 40px;
+    margin-bottom: 10px;
+    /* margin: 40px 60px 10px 40px; */
+    border: solid 5px white;
+}
+.right-contents-mid-mid{
+    background-color: #ff863f;
+    width: 140px;
+    height: 40px;
+    margin-bottom: 10px;
+    /* margin: 5px 60px 10px 40px; */
+    border: solid 5px white;
+}
+.right-contents-bot{
+    background-color: #ff863f;
+    width: 140px;
+    height: 40px;
+    /* margin: 10px 60px 40px 40px; */
+    border: solid 5px white;
+}
+/* ライト内部終了 */
+
+/* フッター */
+.footer{
+    background-color: #d98d30;
+    width: 400px;
+    height: 100px;
+    clear: both;
+}
+
+
+
+
+
+
+
+
+
+
+/* ウィンドウ幅479pxの時 */
+@media screen and (max-width: 479px){
+    .header{
+        width: 200px;
+        height: 200px;
+    }
+    .header-contents-left{
+        background-color: white;
+        width: 60px;
+        height: 160px;
+        margin: 20px 70px;
+    }
+    /* 赤３ブロック */
+    .header-contents-left-left{
+        background-color: #a9004b;
+        width: 40px;
+        height: 40px;
+        margin: 10px 10px 10px 10px;
+        float: left;
+    }
+    .header-contents-left-mid{
+        background-color: #a9004b;
+        width: 40px;
+        height: 40px;
+        margin: 0px 10px 0px 10px;
+        float: left;
+    }
+    .header-contents-left-right{
+        background-color: #a9004b;
+        width: 40px;
+        height: 40px;
+        margin:  10px 10px 10px 10px;
+        float: left;
+    }
+    /* 赤３ブロック終わり */
+    /* レフト */
+    .left{
+        background-color: #80bfa8;
+        width: 200px;
+        height: 150px;
+        float: none;
+    }
+    /* ライト */
+    .right{
+        background-color: #8c2727;
+        width: 200px;
+        height: 220px;
+        float: none;
+    }
+    .right-content{
+        position: absolute;
+        top: 20px;
+        left: 30px;
+    }
+    /* ライト内部 */
+    .right-contents-top-top{
+        background-color: #ff863f;
+        width: 140px;
+        height: 40px;
+        border: solid 5px white;
+    }
+    .right-contents-mid-mid{
+        background-color: #ff863f;
+        width: 140px;
+        height: 40px;
+        border: solid 5px white;
+    }
+    .right-contents-bot{
+        background-color: #ff863f;
+        width: 140px;
+        height: 40px;
+        border: solid 5px white;
+    }
+    /* ライト内部終わり */
+
+
+    /* フッター */
+    .footer{
+        background-color: #d98d30;
+        width: 200px;
+        height: 100px;
+        clear: both;
+    }
+}
