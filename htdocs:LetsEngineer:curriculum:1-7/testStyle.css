@@ -1,0 +1,56 @@
+/* 共通 */
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+*{
+    margin: 0;
+    padding: 0;
+}
+/* ヘッダー */
+.header{
+    background-color: #141f40;
+    width: 400px;
+    height: 100px;
+}
+/* メイン */
+/* メイン右 */
+.left{
+    background-color:#80bfa8;
+    width: 150px;
+    height: 250px;
+    float: left;
+}
+/* メイン左 */
+.right-top{
+    background-color:#0093b7;
+    width: 250px;
+    height: 100px;
+    float: left;
+}
+.right-bot-left{
+    background-color:#dbd403;
+    width: 100px;
+    height: 150px;
+    float: left;
+}
+.right-bot-right-top{
+    background-color:#ff9e6b;
+    width: 150px;
+    height: 50px;
+    float: left;
+}
+.right-bot-right-bot{
+    background-color:#8c2727;
+    width: 150px;
+    height: 100px;
+    float: left;
+}
+/* フッター */
+.footer{
+    background-color:#d98d30;
+    width: 400px;
+    height: 100px;
+    float: left;
+}

@@ -1,0 +1,76 @@
+/* 共通 clearfix使ってないが念のため記述*/
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* ヘッダー */
+.header{
+    background-color: #141f40;
+    width: 400px;
+    height: 100px;
+}
+/* レフト */
+.left{
+    width: 250px;
+    height: 250px;
+    float: left;
+}
+/* レフトの上３色ブロック */
+.left-top{
+    width: 250px;
+    height: 150px;
+    float: left;
+}
+.left-top-left{
+    background-color:#dbd403;
+    width: 100px;
+    height: 150px;
+    float: left;
+}
+/* レフト内の赤と肌色 */
+.left-top-right{
+    width: 150px;
+    height: 150px;
+    float: left;
+}
+.left-top-right-top{
+    background-color:#8c2727;
+    width: 150px;
+    height: 50px;
+    float: left;
+}
+.left-top-right-bot{
+    background-color:#ff9e6b;
+    width: 150px;
+    height: 100px;
+    float: left;
+}
+
+/* レフトの下ブロック（青色） */
+.left-bot{
+    background-color:#0093b7;
+    width: 250px;
+    height: 100px;
+    float: left;
+}
+/* ライト */
+.right{
+    background-color:#80bfa8;
+    width: 150px;
+    height: 250px;
+    float: left;
+}
+
+/* フッター */
+.footer{
+    background-color:#d98d30;
+    width: 400px;
+    height: 100px;
+    float: left;
+}
