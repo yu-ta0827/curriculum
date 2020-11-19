@@ -9,12 +9,6 @@
     padding: 0;
 }
 
-#wrapper{
-    width: 100%;
-    height: auto;
-    margin: 0 auto;
-}
-
 /* ヘッダー */
 .header{
     background-color: #141f40;
