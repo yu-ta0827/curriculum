@@ -1,0 +1,27 @@
+
+body{
+    background-color: rgb(145, 143, 143);
+}
+.tatesen{ 
+    width: auto;
+    height: 5px;
+    background-color: white;
+}
+form{
+    text-align: center;
+}
+h1{
+    text-align: center;
+    color: white;
+}
+div{
+    text-align: center;
+    color: white;
+}
+h2{
+    text-align: center;
+    color: white;
+}
+p{
+    text-align: center;
+}
