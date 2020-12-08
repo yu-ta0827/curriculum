@@ -2,15 +2,14 @@
 $ports =["80","22","20","21"];
 $langs =["PHP","Python","JAVA","HTML"];
 $sqls =["join","select","insern","update"];
+$my_name =$_POST['my_name'];
 //POST送信で送られてきた名前を受け取って変数を作成
 
 //①画像を参考に問題文の選択肢の配列を作成してください。
 
 //② ①で作成した、配列から正解の選択肢の変数を作成してください
-$my_name =$_POST['my_name'];
 ?>
-
-
+<!-- スタイルシートを連携 -->
 <link rel="stylesheet" href="totonoe.css">
 
 <div>お疲れ様です<?php echo $my_name;?>さん</div>
@@ -65,9 +64,7 @@ command＋shift＋Rでページを新しくする
 <!--問題の正解の変数と名前の変数を[answer.php]に送る-->
 <p>
 <form action="answer.php" method="post">
-<input type="hidden" name="my_name" value="<?php echo $my_name; ?>">
+<input type="hidden" name="my_name" value="<?= $my_name; ?>">
     <input type="submit" value="回答する">
 </p>
-<br>
-
 </form>
