@@ -3,6 +3,9 @@ $ports =["80","22","20","21"];
 $langs =["PHP","Python","JAVA","HTML"];
 $sqls =["join","select","insern","update"];
 $my_name =$_POST['my_name'];
+$ports_answer =$ports[0];
+$langs_answer =$langs[3];
+$sqls_answer =$sqls[1]
 //POST送信で送られてきた名前を受け取って変数を作成
 
 //①画像を参考に問題文の選択肢の配列を作成してください。
@@ -64,6 +67,9 @@ command＋shift＋Rでページを新しくする
 <!--問題の正解の変数と名前の変数を[answer.php]に送る-->
 <p>
 <form action="answer.php" method="post">
+<input type="hidden" name="my_answer1" value="<?= $ports_answer; ?>">
+<input type="hidden" name="my_answer2" value="<?= $langs_answer; ?>">
+<input type="hidden" name="my_answer3" value="<?= $sqls_answer; ?>">
 <input type="hidden" name="my_name" value="<?= $my_name; ?>">
     <input type="submit" value="回答する">
 </p>
