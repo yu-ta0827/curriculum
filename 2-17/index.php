@@ -1,7 +1,8 @@
 <?php
 $masume = 0;
 $kaisu = 0;
-    
+$time_now = date_default_timezone_set('Asia/Tokyo');
+
 while($masume<40){
         $me = mt_rand(1,6);
     $masume = $masume+$me;
@@ -22,28 +23,21 @@ while($masume<40){
 // ８から１5まではこんにちは
 // １6から23までこんばんわ
 
-function zikan($aisatu){
-    if($aisatu>=0 and $aisatu<=7){
-        echo "現在".$aisatu."時台です";
+date_default_timezone_set('Asia/Tokyo');
+$time_now= date("H");
+
+    if($time_now>=0 and $time_now<=7){
+        echo "現在".$time_now."時台です";
         echo "<br>";
         echo "おはようございます";
-    }elseif($aisatu>=8 and $aisatu<=15){
-        echo "現在".$aisatu."時台です";
+    }elseif($time_now>=8 and $time_now<=15){
+        echo "現在".$time_now."時台です";
         echo "<br>";
         echo "こんにちは";
-    }elseif($aisatu>=16 and $aisatu<=23){
-        echo "現在".$aisatu."時台です";
+    }elseif($time_now>=16 and $time_now<=23){
+        echo "現在".$time_now."時台です";
         echo "<br>";
         echo "こんばんは";
     }
-}
-// ７時の場合
-zikan(7);
-echo "<br>";
-// １２時の場合
-zikan(12);
-echo "<br>";
-// １９時の場合
-zikan(19);
 
 ?>
