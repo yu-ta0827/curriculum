@@ -1,52 +1,34 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-<!-- データベースのusersから２つの名前だけを取って表示させたいクラス -->
 <?php
-require("getData2.php");
-    class getdata_name{
-        public $sql_name;
-        public $users_data;
+// データベースとユーザー情報の呼び出し
+    require("getData2.php");
+// getdata2.phpのユーザー情報の特定のレコードだけど抽出するためのsql文
+    $first_sql = "select first_name from users where id = 1";
+    $last_sql = "select last_name from users where id = 1";
+    $login_time = "select last_login from users where id = 1";
 
-        public function users_name(){
-            $sql_name = "select * from users where last_name ='隼田' and first_name ='翔伍'";
-            $pdo =DB_connect();
-            try{
-                $smtm =$pdo->prepare($sql_name);
-                $smtm->execute();
-            }catch(PDOException $e){
-                echo 'error'.$e->getmessage();
-            }
-        }
 
-        
+    
+
+// ファーストネームを出す
+$first_name = new getData();
+// ラストネームを出す
+$last_name = new getData($last_sql);
+$last_name->getUserData();
+// ログイン時間を出す
+$time = new getData($login_time);
+$time->getUserData();
+
+try {
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute();
+
+    // ループ文を使用して、1行ずつ読み込んで$rowに代入する
+    // 読み込むものがなくなったらループ終了
+    while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+        echo $row['id'] . '、' . $row['name'] . '、' . $row['password'];
+        echo '<br />';
     }
-// sql文で名前二つを表示させたいけどうまく表示されない・・・
-$user_name = new getdata_name();
-$user_name->users_name();
-
-    ?>
-
-
-
-<!-- なぜか表示されない・・・ -->
-aaaaaaaa
-
-<?= 
-require("getData2.php");
-var_dump($users_data) ?>
-</body>
-</html>
-
-
-
-
-
-
-
-
+} catch (PDOException $e) {
+    echo 'Error: ' . $e->getMessage();
+    die();
+}

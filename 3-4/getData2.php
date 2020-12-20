@@ -35,3 +35,11 @@ class getData{
         return $post_data;
     }
 }
+
+
+
+
+
+
+
+

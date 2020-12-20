@@ -1,19 +1,16 @@
 <?php
+    define('DB_DATABASE', 'checktest4');
+    define('DB_USERNAME', 'root');
+    define('DB_PASSWORD', 'root');
+    define('PDO_DSN', 'mysql:host=localhost;charset=utf8;dbname='.DB_DATABASE);
+    
 
-
-function DB_connect(){
-    define('DB_DATABES','checktest4');
-    define('DB_USRNAME','root');
-    define('DB_PASSWORD','root');
-    define('DB_DSN','mysql:host=localhost;charset=utf8;dbname='.DB_DATABES);
-
-    try{
-        $pdo = new pdo(DB_DNS,DB_USRNAME,DB_PASSWORD);
-        $pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCPTION);
-        return $pdo;
-    }catch(PDOException $e){
-        $e->getmessage();
+    try {
+        $dbh = new PDO(PDO_DSN, DB_USERNAME, DB_PASSWORD);
+        echo 'DBと接続しました。';
+    } catch (PDOException $e) {
+        echo 'Error:' . $e->getMessage();
         die();
     }
-    
-}
+
+    ?>
