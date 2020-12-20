@@ -8,8 +8,8 @@ function DB_connect(){
     define('DB_DSN','mysql:host=localhost;charset=utf8;dbname='.DB_DATABES);
 
     try{
-        $pdo = new pdo(DB_DNS.DB_USRNAME.DB_PASSWORD);
-        $pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCPTION)
+        $pdo = new pdo(DB_DNS,DB_USRNAME,DB_PASSWORD);
+        $pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCPTION);
         return $pdo;
     }catch(PDOException $e){
         $e->getmessage();
