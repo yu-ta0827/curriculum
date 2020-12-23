@@ -23,9 +23,9 @@ $users_data2 = $getData->getpostData();
     <!-- ヘッダー -->
     <div id ="wapper">
         <div class ="header">
-            <img src="file:/Applications/MAMP/htdocs/LetsEngineer/curriculum/3-4/1599315827_logo.png" alt="logo">
+            <img src="./1599315827_logo.png" alt="logo">
             <div class ="header_right">
-                <div class ="header_right_top">ようこそ <?=$users_data1['last_name'].$users_data1['first_name']?> さん</div>
+                <div class ="header_right_top">ようこそ <?=$users_data1['last_name'].$users_data1['first_name']?> さん </div>
                 <div class ="header_right_bot">最終ログイン日 : <?=$users_data1['last_login'];?></div>
             </div>
         </div>
