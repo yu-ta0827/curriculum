@@ -1,6 +1,5 @@
 <?php
 require_once("pdo.php");
-
 class getData{
 
     public $pdo;
@@ -22,7 +21,6 @@ class getData{
         $users_data = $this->pdo->query($getusers_sql)->fetch(PDO::FETCH_ASSOC);
         return $users_data;
     }
-    
     /**
      * 記事情報の取得
      *
@@ -35,6 +33,8 @@ class getData{
         return $post_data;
     }
 }
+
+
 
 
 
