@@ -44,7 +44,7 @@ if (!empty($_POST)) {
             // エラーメッセージの出力
             echo 'Error: ' . $e->getMessage(); 
             echo "<br>";
-            var_dump($post_id);
+            var_dump($_POST);
             // 終了
             die(); 
         }
@@ -64,16 +64,16 @@ if (!empty($_POST)) {
 </title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 </head>
-<body>
-<h1>コメント</h1> 
-<form method="POST" action="">
-<input type="hidden" name="post_id" value="<?php echo $post_id; ?>">
-投稿者名:<br> 
-<input type="text" name="name"> <br> 
-コメント:<br>
-<input type="text" name="content" style="width:200px;height:100px;"><br> 
-<input type="submit" value="submit">
-</form>
-<a href="detail_post.php?id=<?php echo $post_id; ?>">記事詳細に戻る</a>
-</body>
+    <body>
+    <h1>コメント</h1> 
+    <form method="POST" action="">
+        <input type="hidden" name="post_id" value="<?php echo $post_id; ?>">
+        投稿者名:<br> 
+        <input type="text" name="name"> <br> 
+        コメント:<br>
+        <input type="text" name="content" style="width:200px;height:100px;"><br> 
+        <input type="submit" value="submit">
+    </form>
+        <a href="detail_post.php?id=<?php echo $post_id; ?>">記事詳細に戻る</a>
+    </body>
 </html>
